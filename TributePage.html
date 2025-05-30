@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tribute to Ratan Tata | The Humble Visionary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Modern & Heartfelt Styling */
+        :root {
+            --primary: #005f73;
+            --secondary: #0a9396;
+            --accent: #94d2bd;
+            --light: #e9d8a6;
+            --dark: #001219;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(10, 147, 150, 0.8)), 
+                        url('https://images.unsplash.com/photo-1581093196277-1c6a5b3b8a3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 15px auto 0;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        /* Qualities Grid */
+        .qualities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .quality-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .quality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quality-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .quality-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--accent);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .timeline-content:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            top: 30px;
+            transform: rotate(45deg);
+            box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content:after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:after {
+            left: -10px;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(rgba(0, 95, 115, 0.9), rgba(10, 147, 150, 0.9)), 
+                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+        
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .quote-author {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light);
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .timeline:before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-content:after {
+                left: 19px !important;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content:after {
+                left: 19px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Ratan Naval Tata</h1>
+            <p>In loving memory of a visionary who built empires with humility and touched lives with compassion (1937–2024)</p>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">A Life of Purpose</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Born on December 28, 1937, into the illustrious Tata family, Ratan Tata didn't just inherit a business empire—he transformed it into a global phenomenon while maintaining the family's legacy of ethical business and philanthropy.</p>
+                    <p>After completing his education at Cornell and Harvard, he joined the family business in 1961, working his way up from the shop floor to become Chairman of Tata Sons in 1991. Under his leadership, the Tata Group's revenues grew from $5 billion to over $100 billion.</p>
+                    <p>But beyond the numbers, what truly defines Ratan Tata is his unwavering commitment to India's development and his compassionate leadership style that puts people before profits.</p>
+                </div>
+                <div class="about-image">
+                    <img src="chairman-of-india-tata-motors-ratan-tata-geneva-international-motor-show-march-3-2009.webp" alt="Ratan Tata portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Qualities Section -->
+    <section class="section" style="background-color: #f5f9fa;">
+        <div class="container">
+            <h2 class="section-title">Why We Admire Him</h2>
+            
+            <div class="qualities-grid">
+                <div class="quality-card">
+                    <div class="quality-icon">👑</div>
+                    <h3>Visionary Leadership</h3>
+                    <p>Transformed Tata Group into a global powerhouse with acquisitions like Jaguar Land Rover and Corus Steel</p>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">❤️</div>
+                    <h3>Compassionate Philanthropy</h3>
+                    <p>Through Tata Trusts, has donated billions to healthcare, education and rural development</p>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">🌱</div>
+                    <h3>Humble Lifestyle</h3>
+                    <p>Despite his wealth, lives modestly and is known for his down-to-earth personality</p>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">💡</div>
+                    <h3>Innovative Mindset</h3>
+                    <p>Championed projects like the Tata Nano, aiming to make cars affordable for common people</p>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">🛡️</div>
+                    <h3>Ethical Business</h3>
+                    <p>Maintained Tata Group's reputation for integrity even during challenging times</p>
+                </div>
+                
+                <div class="quality-card">
+                    <div class="quality-icon">🌍</div>
+                    <h3>Nation Builder</h3>
+                    <p>His initiatives have created jobs, advanced technology, and improved lives across India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Timeline Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Milestones in His Journey</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1937</div>
+                        <p>Born in Mumbai to Naval Tata and Soonoo Commissariat</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1962</div>
+                        <p>Joins Tata Steel, working on the shop floor in Jamshedpur</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1991</div>
+                        <p>Becomes Chairman of Tata Sons, begins transforming the conglomerate</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2000</div>
+                        <p>Acquires UK's Tetley Tea, marking Tata's first major international acquisition</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2008</div>
+                        <p>Leads acquisition of Jaguar Land Rover and shows remarkable leadership during Mumbai attacks</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2012</div>
+                        <p>Steps down as Chairman but continues guiding the group as Chairman Emeritus</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <p>Passed away at the age of 86 in Mumbai. Honored with a state funeral, his legacy continues to inspire generations.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote">
+                "I don't believe in taking the right decisions. I take decisions and then make them right."
+            </div>
+            <div class="quote-author">— Ratan Tata</div>
+        </div>
+    </section>
+    
+    <!-- Legacy Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">His Enduring Legacy</h2>
+            
+            <div class="about-content" style="flex-direction: row-reverse;">
+                <div class="about-text">
+                    <p>Ratan Tata's impact extends far beyond business. His leadership style—combining sharp business acumen with deep compassion—has redefined corporate India.</p>
+                    <p>During the 2008 Mumbai attacks, he personally visited the Taj Hotel (a Tata property), stood with employees, and ensured all affected staff were cared for. This moment epitomizes his human-centered approach.</p>
+                    <p>Through Tata Trusts, he championed initiatives in healthcare, education, and rural development. His support for startups and young entrepreneurs through investments and mentorship reflected his deep commitment to India's future.</p>
+                </div>
+                <div class="about-image">
+                    <img src="archaeologist-90.webp" alt="Ratan Tata with young entrepreneurs">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Created with deep respect and admiration</p>
+            <p>For more about Ratan Tata's work:</p>
+            <div class="footer-links">
+                <a href="https://www.tata.com" target="_blank">Tata Group</a>
+                <a href="https://www.tatatrusts.org" target="_blank">Tata Trusts</a>
+                <a href="https://en.wikipedia.org/wiki/Ratan_Tata" target="_blank">Wikipedia</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
